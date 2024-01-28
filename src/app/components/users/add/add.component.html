@@ -1,0 +1,41 @@
+<div class="pt-2 pb-5">
+  <h1 mat-dialog-title>Add new user</h1>
+
+  <div mat-dialog-content>
+    <form class="row" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+
+      <mat-form-field class="col-12">
+        <mat-label>First name</mat-label>
+        <input matInput type="text" required formControlName="first_name" />
+      </mat-form-field>
+
+      <mat-form-field class="col-12">
+        <mat-label>Last name</mat-label>
+        <input matInput type="text" required formControlName="last_name" />
+      </mat-form-field>
+
+      <mat-form-field class="col-12">
+        <mat-label>Email</mat-label>
+        <input matInput type="text" required formControlName="email" />
+      </mat-form-field>
+
+      <mat-form-field class="col-12">
+        <mat-label>Phone</mat-label>
+        <input matInput type="text" required formControlName="phone" />
+      </mat-form-field>
+
+      <mat-form-field class="col-12">
+        <mat-label>Location</mat-label>
+        <input matInput type="text" required formControlName="location" />
+      </mat-form-field>
+
+    </form>
+  </div>
+
+  <div mat-dialog-actions class="justify-content-evenly">
+    <button mat-raised-button (click)="onNoClick()">Cancel</button>
+    <span class="spacer"></span>
+    <button mat-raised-button color="primary" (click)="onSubmit()"
+      cdkFocusInitial><mat-icon>save</mat-icon>Save</button>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<!-- categories.component.html -->
+<div class="pt-2 pb-5">
+  <h1 mat-dialog-title>Choose a Category:</h1>
+  <div mat-dialog-content>
+    <mat-form-field>
+      <mat-label>Categories</mat-label>
+      <mat-select [(value)]="selectedCategory">
+        <mat-option value="garages">Garages</mat-option>
+        <mat-option value="info points">Info Points</mat-option>
+        <mat-option value="parkings">Parkings</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-raised-button (click)="onNoClick()">Cancel</button>
+    <button mat-raised-button color="primary" [mat-dialog-close]="selectedCategory" cdkFocusInitial
+      (click)="onConfirm()">Ok</button>
+  </div>
+</div>

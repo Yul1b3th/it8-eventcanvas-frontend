@@ -1,0 +1,16 @@
+<div class="container mt-5">
+  <h1>CRUD Database</h1>
+  <button mat-raised-button color="primary" (click)="onAddUser()" class="mb-5 mt-3">Add
+    User</button>
+  <div class="d-flex flex-wrap gap-3 w-100">
+    @for (user of users; track $index) {
+    @if (user.state) {
+    <app-card class="mb-4" [user]="user" (userDeleted)="handleUserDeleted($event)" (userUpdated)="onUserUpdated()" />
+    }
+
+    }@empty {
+    <mat-spinner></mat-spinner>
+    }
+  </div>
+
+</div>

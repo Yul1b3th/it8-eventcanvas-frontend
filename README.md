@@ -1,27 +1,100 @@
 # EventCanvas
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.10.
+## 📄 Descripción
 
-## Development server
+Este repositorio contiene los recursos de una aplicación web para la interacción con diversas APIs, gestión de usuarios, integración de MapBox, FullCalendar y Chart.js. La aplicación implementa un sistema CRUD completo para usuarios, almacenando todos los datos generados por la API correspondiente. Además, se han creado múltiples categorías de marcadores con sus respectivos filtros, proporcionando una experiencia rica y personalizada para los usuarios. También se ha implementado un CRUD para la gestión de eventos, completando así la funcionalidad integral de la aplicación.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## ✨ Características 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **API en Node.js:** La aplicación cuenta con una API desarrollada en Node.js.
 
-## Build
+- **Gestion de usuarios:** Implementación de un sistema CRUD (Crear, Leer, Actualizar, Eliminar usuarios).
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Mapa Interactivo con MapBox:** Utilización de MapBox para crear un mapa interactivo donde los usuarios pueden explorar y almacenar ubicaciones con latitud y longitud.
 
-## Running unit tests
+- **Calendario Dinámico con FullCalendar:** Integración de FullCalendar para ofrecer un calendario dinámico, permitiendo a los usuarios agregar, modificar y eliminar eventos de manera intuitiva.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- **Gráficos Interactivos con Chart.js:** Utilización de Chart.js para representar datos de manera visual a través de gráficos interactivos, como gráficos de barras y gráficos lineales.
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## ☁️ Interacción con la API "EventCanvas"
 
-## Further help
+Este proyecto se integra con la API [EventCanvas](https://github.com/Yul1b3th/eventcanvas-backend) para gestionar la información de los usuarios. Esta API, construida con Node.js, Express y MySQL, proporciona una serie de endpoints que permiten realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre los datos de los usuarios.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+La API sigue los principios de una arquitectura RESTful, lo que facilita su integración y uso. Puedes explorar la [documentación](https://github.com/Yul1b3th/eventcanvas-backend) para conocer más detalles sobre los endpoints disponibles, los métodos HTTP que soportan y la estructura de los datos que devuelven.
+
+
+## 💻 Tecnologías Utilizadas
+
+- HTML5
+- SCSS
+- TypeScript
+- [Bootstrap](https://getbootstrap.com/) version 5.3.2.
+- [Angular CLI](https://angular.dev/) version 17.0.10.
+- [Angular Material](https://material.angular.io/) version 17.1.0.
+- [Mapbox](https://www.mapbox.com/)
+- [FullCalendar](https://fullcalendar.io/docs/angular)
+- [Chart.js](https://www.chartjs.org/docs/latest/)
+
+## 📋 Requisitos
+
+- Node.js y npm instalados en tu sistema. Puedes descargarlos desde [nodejs.org](https://nodejs.org/).
+- Angular CLI instalado globalmente. Puedes instalarlo con el siguiente comando:
+
+```bash
+npm install -g @angular/cli
+```
+
+## 🛠️ Instalación
+**✔️ Paso 1:** Levanta el servidor de base de datos, utilizando XAMPP u otra herramienta similar. Importa la base de datos utilizando el archivo **_eventcanvas.sql_**.
+
+
+**✔️ Paso 2:** Levanta el servidor [EventCanvas](https://github.com/Yul1b3th/eventcanvas-backend)
+
+
+**✔️ Paso 3:** Clona el repositorio:
+```bash
+git clone https://github.com/Yul1b3th/eventcanvas.git
+```
+
+**✔️ Paso 4:** Ingresa al directorio del proyecto:
+```bash
+cd eventcanvas
+```
+
+**✔️ Paso 5:** Copia el archivo **_.env.template_** y renómbralo como **_.env_**. Este archivo contendrá las variables de entorno necesarias para la configuración del proyecto.
+
+
+**✔️ Paso 7:** Abre el archivo **_.env_** y completa las variables de entorno según las especificaciones proporcionadas en el archivo. Asegúrate de incluir la clave de acceso de MapBox u otras credenciales sensibles sin compartirlas en repositorios públicos.
+
+
+**✔️ Paso 7:** Instala las dependencias:
+```bash
+npm install
+```
+
+
+## ▶️ Ejecución
+Ejecuta la aplicación con el siguiente comando:
+```bash
+npm start
+```
+
+## 🌐 Despliegue
+
+Para desplegar la aplicación en producción, sigue estos pasos:
+
+**✔️ Paso 1:** Ejecuta el comando de construcción para compilar la aplicación Angular:
+```bash
+ng build --prod
+```
+
+**✔️ Paso 2:** Los archivos generados se almacenarán en el directorio `dist/`. Puedes desplegar estos archivos en un servidor web o en un servicio de alojamiento que admita aplicaciones web estáticas.
+
+
+## 🤝 Contribuciones
+
+Si deseas colaborar en este proyecto o informar sobre problemas, no dudes en crear un "issue" o enviar un "pull request."
+
+

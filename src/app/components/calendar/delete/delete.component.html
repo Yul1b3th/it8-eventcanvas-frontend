@@ -1,0 +1,43 @@
+<div class="pt-2 pb-5">
+  <h1 mat-dialog-title>Edit Event</h1>
+
+  <div mat-dialog-content>
+    <form class="row" [formGroup]="eventForm">
+      <mat-form-field class="col-12">
+        <mat-label>Title</mat-label>
+        <input matInput type="text" required formControlName="title" />
+      </mat-form-field>
+
+      <mat-form-field class="col-12">
+        <mat-label>Description</mat-label>
+        <input matInput type="text" required formControlName="description" />
+      </mat-form-field>
+
+      <mat-form-field class="col-12">
+        <mat-label>Location</mat-label>
+        <input matInput type="text" required formControlName="location" />
+      </mat-form-field>
+
+
+      <mat-form-field>
+        <mat-label>Color</mat-label>
+        <mat-select required formControlName="color">
+          <mat-option value="#198754" class="bg-success"></mat-option>
+          <mat-option value="#0DCAF0" class="bg-info"></mat-option>
+          <mat-option value="#FFC107" class="bg-warning"></mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="col-12">
+        <mat-label>Start Date</mat-label>
+        <input matInput type="datetime-local" required formControlName="start" />
+      </mat-form-field>
+    </form>
+  </div>
+
+  <div mat-dialog-actions class="justify-content-evenly">
+    <button mat-raised-button (click)="onNoClick()">Cancel</button>
+    <button mat-raised-button color="primary" (click)="onConfirmEdit()">Save</button>
+    <button mat-raised-button color="warn" (click)="onConfirmDelete()">Delete</button>
+  </div>
+</div>
