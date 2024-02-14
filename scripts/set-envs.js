@@ -1,7 +1,7 @@
 const { writeFileSync, mkdirSync } = require( 'fs' );
 
 require( 'dotenv' ).config();
-console.log( process.env ) // remove this after you've confirmed it is working
+// console.log( process.env ) // remove this after you've confirmed it is working
 
 const targetPath = './src/environments/environment.ts';
 
