@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, Inject } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -21,19 +21,18 @@ export interface DialogData {
 @Component({
     selector: 'app-add',
     imports: [
-        MatFormFieldModule,
-        MatInputModule,
-        MatButtonModule,
-        MatDialogTitle,
-        MatDialogContent,
-        MatDialogActions,
-        MatDialogClose,
-        MatIconModule,
-        MatSelectModule,
-        CommonModule,
-        FormsModule,
-        ReactiveFormsModule,
-    ],
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatDialogTitle,
+    MatDialogContent,
+    MatDialogActions,
+    MatDialogClose,
+    MatIconModule,
+    MatSelectModule,
+    FormsModule,
+    ReactiveFormsModule
+],
     templateUrl: './add.component.html',
     styleUrl: './add.component.scss'
 })

@@ -1,4 +1,6 @@
-<div *ngFor="let category of categories">
-  <input type="checkbox" [id]="category" [(ngModel)]="filter[category]" (ngModelChange)="onFilterChange()" />
-  <label [for]="category">{{ category }}</label>
-</div>
+@for (category of categories; track category) {
+  <div>
+    <input type="checkbox" [id]="category" [(ngModel)]="filter[category]" (ngModelChange)="onFilterChange()" />
+    <label [for]="category">{{ category }}</label>
+  </div>
+}

@@ -1,6 +1,8 @@
 <div class="pt-2 pb-5">
 
-  <h1 mat-dialog-title>Edit <small *ngIf="currentUser.id">{{currentUser.first_name}}</small></h1>
+  <h1 mat-dialog-title>Edit @if (currentUser.id) {
+    <small>{{currentUser.first_name}}</small>
+  }</h1>
   <div mat-dialog-content>
     <form class="row" [formGroup]="userForm" (ngSubmit)="onSubmit()">
 
@@ -37,5 +39,5 @@
     <span class="spacer"></span>
     <button mat-raised-button color="primary" (click)="onSubmit()"
       cdkFocusInitial><mat-icon>save</mat-icon>Save</button>
+    </div>
   </div>
-</div>

@@ -9,25 +9,24 @@ import { MatSelectModule } from '@angular/material/select';
 
 import { Event } from "../../../interfaces/calendar.interface";
 import { EventsService } from '../../../services/calendar.service';
-import { CommonModule } from '@angular/common';
+
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
     selector: 'app-delete',
     imports: [
-        MatFormFieldModule,
-        MatInputModule,
-        MatButtonModule,
-        MatDialogTitle,
-        MatDialogContent,
-        MatDialogActions,
-        MatDialogClose,
-        MatIconModule,
-        MatSelectModule,
-        CommonModule,
-        FormsModule,
-        ReactiveFormsModule,
-    ],
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatDialogTitle,
+    MatDialogContent,
+    MatDialogActions,
+    MatDialogClose,
+    MatIconModule,
+    MatSelectModule,
+    FormsModule,
+    ReactiveFormsModule
+],
     templateUrl: './delete.component.html',
     styleUrl: './delete.component.scss'
 })

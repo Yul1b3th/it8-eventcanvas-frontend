@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, Inject, OnInit } from '@angular/core';
 import {
   FormBuilder,
@@ -36,25 +36,24 @@ import { UsersService } from '../../../services/user.service';
 @Component({
     selector: 'app-edit',
     imports: [
-        MatAutocompleteModule,
-        MatButtonModule,
-        MatCardModule,
-        MatChipsModule,
-        MatDialogModule,
-        MatFormFieldModule,
-        MatGridListModule,
-        MatIconModule,
-        MatInputModule,
-        MatListModule,
-        MatProgressSpinnerModule,
-        MatSelectModule,
-        MatSidenavModule,
-        MatSnackBarModule,
-        MatToolbarModule,
-        CommonModule,
-        FormsModule,
-        ReactiveFormsModule,
-    ],
+    MatAutocompleteModule,
+    MatButtonModule,
+    MatCardModule,
+    MatChipsModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatGridListModule,
+    MatIconModule,
+    MatInputModule,
+    MatListModule,
+    MatProgressSpinnerModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatSnackBarModule,
+    MatToolbarModule,
+    FormsModule,
+    ReactiveFormsModule
+],
     templateUrl: './edit.component.html',
     styleUrl: './edit.component.scss'
 })

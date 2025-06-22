@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, Inject, OnInit, } from '@angular/core';
 
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
@@ -32,25 +32,24 @@ import AddComponent from '../add/add.component';
 @Component({
     selector: 'app-list',
     imports: [
-        MatAutocompleteModule,
-        MatButtonModule,
-        MatCardModule,
-        MatChipsModule,
-        MatDialogModule,
-        MatFormFieldModule,
-        MatGridListModule,
-        MatIconModule,
-        MatInputModule,
-        MatListModule,
-        MatProgressSpinnerModule,
-        MatSelectModule,
-        MatSidenavModule,
-        MatSnackBarModule,
-        MatToolbarModule,
-        CommonModule,
-        CardComponent,
-        AddComponent,
-    ],
+    MatAutocompleteModule,
+    MatButtonModule,
+    MatCardModule,
+    MatChipsModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatGridListModule,
+    MatIconModule,
+    MatInputModule,
+    MatListModule,
+    MatProgressSpinnerModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatSnackBarModule,
+    MatToolbarModule,
+    CardComponent,
+    AddComponent
+],
     templateUrl: './list.component.html',
     styleUrl: './list.component.scss'
 })

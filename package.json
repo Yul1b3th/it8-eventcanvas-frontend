@@ -11,16 +11,20 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^19.2.14",
-    "@angular/cdk": "^19.2.18",
-    "@angular/common": "^19.2.14",
-    "@angular/compiler": "^19.2.14",
-    "@angular/core": "^19.2.14",
-    "@angular/forms": "^19.2.14",
-    "@angular/material": "^19.2.18",
-    "@angular/platform-browser": "^19.2.14",
-    "@angular/platform-browser-dynamic": "^19.2.14",
-    "@angular/router": "^19.2.14",
+    "@angular/animations": "^20.0.4",
+    "@angular/cdk": "^20.0.3",
+    "@angular/common": "^20.0.4",
+    "@angular/compiler": "^20.0.4",
+    "@angular/core": "^20.0.4",
+    "@angular/forms": "^20.0.4",
+    "@angular/material": "^20.0.3",
+    "@angular/platform-browser": "^20.0.4",
+    "@angular/platform-browser-dynamic": "^20.0.4",
+    "@angular/router": "^20.0.4",
+    "@fullcalendar/angular": "^6.1.17",
+    "@fullcalendar/core": "^6.1.17",
+    "@fullcalendar/daygrid": "^6.1.17",
+    "@fullcalendar/interaction": "^6.1.17",
     "bootstrap": "^5.3.2",
     "chart.js": "^4.4.1",
     "mapbox-gl": "^3.1.2",
@@ -29,9 +33,9 @@
     "zone.js": "~0.15.1"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^19.2.15",
-    "@angular/cli": "^19.2.15",
-    "@angular/compiler-cli": "^19.2.14",
+    "@angular/build": "^20.0.3",
+    "@angular/cli": "^20.0.3",
+    "@angular/compiler-cli": "^20.0.4",
     "@types/jasmine": "~5.1.0",
     "@types/mapbox-gl": "^2.7.19",
     "dotenv": "^16.4.1",
@@ -41,6 +45,6 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "typescript": "~5.5.4"
+    "typescript": "~5.8.3"
   }
 }

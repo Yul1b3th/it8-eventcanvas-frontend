@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -27,25 +27,24 @@ import { User } from '../../../interfaces/user.interface';
 @Component({
     selector: 'app-add',
     imports: [
-        MatAutocompleteModule,
-        MatButtonModule,
-        MatCardModule,
-        MatChipsModule,
-        MatDialogModule,
-        MatFormFieldModule,
-        MatGridListModule,
-        MatIconModule,
-        MatInputModule,
-        MatListModule,
-        MatProgressSpinnerModule,
-        MatSelectModule,
-        MatSidenavModule,
-        MatSnackBarModule,
-        MatToolbarModule,
-        CommonModule,
-        FormsModule,
-        ReactiveFormsModule,
-    ],
+    MatAutocompleteModule,
+    MatButtonModule,
+    MatCardModule,
+    MatChipsModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatGridListModule,
+    MatIconModule,
+    MatInputModule,
+    MatListModule,
+    MatProgressSpinnerModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatSnackBarModule,
+    MatToolbarModule,
+    FormsModule,
+    ReactiveFormsModule
+],
     templateUrl: './add.component.html',
     styleUrl: './add.component.scss'
 })
