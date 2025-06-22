@@ -1,11 +1,10 @@
 import { ApplicationConfig, importProvidersFrom } from '@angular/core';
 import { provideRouter } from '@angular/router';
 
-
-
 import { routes } from './app.routes';
+import { provideHttpClient, withFetch } from '@angular/common/http';
+
 import { provideAnimations } from '@angular/platform-browser/animations';
-import {} from '@angular/common/http';
 
 import { LOCALE_ID } from '@angular/core';
 
@@ -18,8 +17,8 @@ mapboxgl.accessToken = environment.mapbox_key;
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
-    importProvidersFrom(HttpClientModule),
+    provideHttpClient(withFetch()),
     provideAnimations(),
-    { provide: LOCALE_ID, useValue: 'es-ES' }
-  ]
+    { provide: LOCALE_ID, useValue: 'es-ES' },
+  ],
 };
