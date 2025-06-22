@@ -1,6 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component, Inject, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  FormsModule,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
 import { switchMap } from 'rxjs';
@@ -23,10 +30,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatDialogRef } from '@angular/material/dialog';
 
-
 import { User } from '../../../interfaces/user.interface';
 import { UsersService } from '../../../services/user.service';
-
 
 @Component({
   selector: 'app-edit',
@@ -53,19 +58,17 @@ import { UsersService } from '../../../services/user.service';
     ReactiveFormsModule,
   ],
   templateUrl: './edit.component.html',
-  styleUrl: './edit.component.scss'
+  styleUrl: './edit.component.scss',
 })
-
 export default class EditComponent implements OnInit {
-
   public userForm: FormGroup;
 
   constructor(
+    public dialogRef: MatDialogRef<EditComponent>,
+    @Inject(MAT_DIALOG_DATA) public user: User,
     private usersService: UsersService,
     private activatedRoute: ActivatedRoute,
     private router: Router,
-    @Inject(MAT_DIALOG_DATA) public user: User,
-    public dialogRef: MatDialogRef<EditComponent>,
     private fb: FormBuilder
   ) {
     this.userForm = this.fb.group({
@@ -74,21 +77,21 @@ export default class EditComponent implements OnInit {
       last_name: [user.last_name, Validators.required],
       email: [user.email, Validators.required],
       phone: [user.phone, Validators.required],
-      location: [user.location, Validators.required]
+      location: [user.location, Validators.required],
     });
   }
 
   ngOnInit(): void {
     if (this.router.url.includes('edit')) {
-      this.activatedRoute.params.pipe(
-        switchMap(({ id }) => this.usersService.getUserById(id))
-      ).subscribe(user => {
-        if (!user) {
-          this.router.navigateByUrl('/');
-        } else {
-          this.userForm.reset(user);
-        }
-      });
+      this.activatedRoute.params
+        .pipe(switchMap(({ id }) => this.usersService.getUserById(id)))
+        .subscribe((user) => {
+          if (!user) {
+            this.router.navigateByUrl('/');
+          } else {
+            this.userForm.reset(user);
+          }
+        });
     }
   }
 
@@ -107,12 +110,12 @@ export default class EditComponent implements OnInit {
   onSubmit(): void {
     if (this.userForm.valid) {
       if (this.currentUser.id) {
-        this.usersService.updateUser(this.currentUser).subscribe(user => {
+        this.usersService.updateUser(this.currentUser).subscribe((user) => {
           console.log(`${user.first_name} updated!`);
           this.dialogRef.close(user); // Pasar los datos del usuario
         });
       } else {
-        this.usersService.addUser(this.currentUser).subscribe(user => {
+        this.usersService.addUser(this.currentUser).subscribe((user) => {
           console.log(`${user.first_name} added!`);
           this.dialogRef.close(user); // Pasar los datos del usuario
         });

@@ -5,13 +5,13 @@ import { tap, catchError } from 'rxjs/operators';
 import { User } from '../interfaces/user.interface';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UsersService {
-  private apiUrl: string = 'http://localhost:8000/api/usuarios';
+  private apiUrl: string = 'http://localhost:8080/api/usuarios';
   userAdded = new Subject<User>();
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getUsers(): Observable<User[]> {
     return this.http.get<User[]>(this.apiUrl);
@@ -26,9 +26,9 @@ export class UsersService {
   }
 
   addUser(user: User): Observable<User> {
-    return this.http.post<User>(this.apiUrl, user).pipe(
-      tap((newUser) => this.userAdded.next(newUser))
-    );
+    return this.http
+      .post<User>(this.apiUrl, user)
+      .pipe(tap((newUser) => this.userAdded.next(newUser)));
   }
 
   updateUser(user: User): Observable<User> {

@@ -7,16 +7,14 @@ import { tap, catchError } from 'rxjs/operators';
 
 import { Event } from '../interfaces/calendar.interface';
 
-
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-
 export class EventsService {
-  private apiUrl: string = 'http://localhost:8000/api/events';
+  private apiUrl: string = 'http://localhost:8080/api/events';
   eventAdded = new Subject<Event>();
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getEvents(): Observable<Event[]> {
     return this.http.get<Event[]>(this.apiUrl);
@@ -31,9 +29,9 @@ export class EventsService {
   }
 
   addEvent(event: Event): Observable<Event> {
-    return this.http.post<Event>(this.apiUrl, event).pipe(
-      tap((newEvent) => this.eventAdded.next(newEvent))
-    );
+    return this.http
+      .post<Event>(this.apiUrl, event)
+      .pipe(tap((newEvent) => this.eventAdded.next(newEvent)));
   }
 
   updateEvent(event: Event): Observable<Event> {

@@ -85,7 +85,7 @@
 
 @font-face {
   font-family: 'BeVietnamPro';
-  src: url('fonts/BeVietnamPro-ExtraBoldItalic.ttf') format('truetype');
+  src: url('fonts/BeVietnamPro-BoldItalic.ttf') format('truetype');
   font-weight: 700;
   font-style: italic;
 }

@@ -7,20 +7,18 @@ import { tap, catchError } from 'rxjs/operators';
 
 import { AppMarker } from '../interfaces/map.interfaces';
 
-
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class MarkersService {
-  private apiUrl: string = 'http://localhost:8000/api/markers';
+  private apiUrl: string = 'http://localhost:8080/api/markers';
   markerAdded = new Subject<AppMarker>();
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getMarkers(): Observable<AppMarker[]> {
     return this.http.get<AppMarker[]>(this.apiUrl);
   }
-
 
   getMarkerById(id: string): Observable<AppMarker> {
     return this.http.get<AppMarker>(`${this.apiUrl}/${id}`).pipe(
@@ -29,8 +27,6 @@ export class MarkersService {
       })
     );
   }
-
-
 
   /*   addMarker(marker: AppMarker): Observable<AppMarker> {
       return this.http.post<AppMarker>(`${this.apiUrl}`, marker);
@@ -48,7 +44,10 @@ export class MarkersService {
 
   updateMarker(appmarker: AppMarker): Observable<AppMarker> {
     if (!appmarker.id) throw new Error('AppMarker id is required');
-    return this.http.patch<AppMarker>(`${this.apiUrl}/${appmarker.id}`, appmarker);
+    return this.http.patch<AppMarker>(
+      `${this.apiUrl}/${appmarker.id}`,
+      appmarker
+    );
   }
 
   deleteMarkerById(id: number): Observable<void> {
