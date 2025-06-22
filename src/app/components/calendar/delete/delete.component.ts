@@ -13,25 +13,23 @@ import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-delete',
-  standalone: true,
-  imports: [
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    MatDialogTitle,
-    MatDialogContent,
-    MatDialogActions,
-    MatDialogClose,
-    MatIconModule,
-    MatSelectModule,
-
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-  ],
-  templateUrl: './delete.component.html',
-  styleUrl: './delete.component.scss'
+    selector: 'app-delete',
+    imports: [
+        MatFormFieldModule,
+        MatInputModule,
+        MatButtonModule,
+        MatDialogTitle,
+        MatDialogContent,
+        MatDialogActions,
+        MatDialogClose,
+        MatIconModule,
+        MatSelectModule,
+        CommonModule,
+        FormsModule,
+        ReactiveFormsModule,
+    ],
+    templateUrl: './delete.component.html',
+    styleUrl: './delete.component.scss'
 })
 
 export class DeleteComponent implements OnInit {

@@ -25,31 +25,29 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { User } from '../../../interfaces/user.interface';
 
 @Component({
-  selector: 'app-add',
-  standalone: true,
-  imports: [
-    MatAutocompleteModule,
-    MatButtonModule,
-    MatCardModule,
-    MatChipsModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatGridListModule,
-    MatIconModule,
-    MatInputModule,
-    MatListModule,
-    MatProgressSpinnerModule,
-    MatSelectModule,
-    MatSidenavModule,
-    MatSnackBarModule,
-    MatToolbarModule,
-
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-  ],
-  templateUrl: './add.component.html',
-  styleUrl: './add.component.scss'
+    selector: 'app-add',
+    imports: [
+        MatAutocompleteModule,
+        MatButtonModule,
+        MatCardModule,
+        MatChipsModule,
+        MatDialogModule,
+        MatFormFieldModule,
+        MatGridListModule,
+        MatIconModule,
+        MatInputModule,
+        MatListModule,
+        MatProgressSpinnerModule,
+        MatSelectModule,
+        MatSidenavModule,
+        MatSnackBarModule,
+        MatToolbarModule,
+        CommonModule,
+        FormsModule,
+        ReactiveFormsModule,
+    ],
+    templateUrl: './add.component.html',
+    styleUrl: './add.component.scss'
 })
 
 export default class AddComponent {

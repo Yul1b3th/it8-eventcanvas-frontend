@@ -30,33 +30,29 @@ import AddComponent from '../add/add.component';
 
 
 @Component({
-  selector: 'app-list',
-  standalone: true,
-  imports: [
-    MatAutocompleteModule,
-    MatButtonModule,
-    MatCardModule,
-    MatChipsModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatGridListModule,
-    MatIconModule,
-    MatInputModule,
-    MatListModule,
-    MatProgressSpinnerModule,
-    MatSelectModule,
-    MatSidenavModule,
-    MatSnackBarModule,
-    MatToolbarModule,
-
-    CommonModule,
-    CardComponent,
-
-    AddComponent,
-
-  ],
-  templateUrl: './list.component.html',
-  styleUrl: './list.component.scss'
+    selector: 'app-list',
+    imports: [
+        MatAutocompleteModule,
+        MatButtonModule,
+        MatCardModule,
+        MatChipsModule,
+        MatDialogModule,
+        MatFormFieldModule,
+        MatGridListModule,
+        MatIconModule,
+        MatInputModule,
+        MatListModule,
+        MatProgressSpinnerModule,
+        MatSelectModule,
+        MatSidenavModule,
+        MatSnackBarModule,
+        MatToolbarModule,
+        CommonModule,
+        CardComponent,
+        AddComponent,
+    ],
+    templateUrl: './list.component.html',
+    styleUrl: './list.component.scss'
 })
 
 export class ListComponent implements OnInit {

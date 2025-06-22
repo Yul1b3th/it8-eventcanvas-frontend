@@ -4,11 +4,10 @@ import { FormsModule } from '@angular/forms';
 
 
 @Component({
-  selector: 'app-categories-filter',
-  standalone: true,
-  imports: [CommonModule, FormsModule,],
-  templateUrl: './categories-filter.component.html',
-  styleUrl: './categories-filter.component.scss'
+    selector: 'app-categories-filter',
+    imports: [CommonModule, FormsModule,],
+    templateUrl: './categories-filter.component.html',
+    styleUrl: './categories-filter.component.scss'
 })
 
 export class CategoriesFilterComponent {

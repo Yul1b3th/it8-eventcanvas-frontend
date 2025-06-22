@@ -30,11 +30,10 @@ interface PlainMarker {
 }
 
 @Component({
-  selector: 'app-map',
-  standalone: true,
-  imports: [CommonModule, CategoriesComponent, CategoriesFilterComponent, FormsModule,],
-  templateUrl: './map.component.html',
-  styleUrl: './map.component.scss'
+    selector: 'app-map',
+    imports: [CommonModule, CategoriesComponent, CategoriesFilterComponent, FormsModule,],
+    templateUrl: './map.component.html',
+    styleUrl: './map.component.scss'
 })
 
 export default class MapComponent implements AfterViewInit, OnInit {

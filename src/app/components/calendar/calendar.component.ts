@@ -22,11 +22,10 @@ import { Event } from '../../interfaces/calendar.interface';
 
 
 @Component({
-  selector: 'app-calendar',
-  standalone: true,
-  imports: [FullCalendarModule, MatFormFieldModule, MatInputModule, FormsModule, MatButtonModule],
-  templateUrl: './calendar.component.html',
-  styleUrls: ['./calendar.component.scss']
+    selector: 'app-calendar',
+    imports: [FullCalendarModule, MatFormFieldModule, MatInputModule, FormsModule, MatButtonModule],
+    templateUrl: './calendar.component.html',
+    styleUrls: ['./calendar.component.scss']
 })
 
 export default class CalendarComponent implements OnInit {

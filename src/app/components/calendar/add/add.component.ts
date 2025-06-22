@@ -19,26 +19,23 @@ export interface DialogData {
 }
 
 @Component({
-  selector: 'app-add',
-  standalone: true,
-  imports: [
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    MatDialogTitle,
-    MatDialogContent,
-    MatDialogActions,
-    MatDialogClose,
-    MatIconModule,
-    MatSelectModule,
-
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-
-  ],
-  templateUrl: './add.component.html',
-  styleUrl: './add.component.scss'
+    selector: 'app-add',
+    imports: [
+        MatFormFieldModule,
+        MatInputModule,
+        MatButtonModule,
+        MatDialogTitle,
+        MatDialogContent,
+        MatDialogActions,
+        MatDialogClose,
+        MatIconModule,
+        MatSelectModule,
+        CommonModule,
+        FormsModule,
+        ReactiveFormsModule,
+    ],
+    templateUrl: './add.component.html',
+    styleUrl: './add.component.scss'
 })
 
 export class AddComponent {

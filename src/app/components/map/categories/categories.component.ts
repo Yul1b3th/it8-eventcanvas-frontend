@@ -14,18 +14,17 @@ import { MatSelectModule } from '@angular/material/select';
 import { AppMarker } from '../../../interfaces/map.interfaces';
 
 @Component({
-  selector: 'app-categories',
-  standalone: true,
-  imports: [
-    MatAutocompleteModule,
-    MatButtonModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatSelectModule,
-  ],
-  templateUrl: './categories.component.html',
-  styleUrl: './categories.component.scss'
+    selector: 'app-categories',
+    imports: [
+        MatAutocompleteModule,
+        MatButtonModule,
+        MatDialogModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatSelectModule,
+    ],
+    templateUrl: './categories.component.html',
+    styleUrl: './categories.component.scss'
 })
 
 export class CategoriesComponent {

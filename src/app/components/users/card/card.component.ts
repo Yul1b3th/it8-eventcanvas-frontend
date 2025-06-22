@@ -26,31 +26,28 @@ import { UsersService } from '../../../services/user.service';
 import EditComponent from '../edit/edit.component';
 
 @Component({
-  selector: 'app-card',
-  standalone: true,
-  imports: [
-    MatAutocompleteModule,
-    MatButtonModule,
-    MatCardModule,
-    MatChipsModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatGridListModule,
-    MatIconModule,
-    MatInputModule,
-    MatListModule,
-    MatProgressSpinnerModule,
-    MatSelectModule,
-    MatSidenavModule,
-    MatSnackBarModule,
-    MatToolbarModule,
-
-    EditComponent,
-
-    RouterModule,
-  ],
-  templateUrl: './card.component.html',
-  styleUrl: './card.component.scss'
+    selector: 'app-card',
+    imports: [
+        MatAutocompleteModule,
+        MatButtonModule,
+        MatCardModule,
+        MatChipsModule,
+        MatDialogModule,
+        MatFormFieldModule,
+        MatGridListModule,
+        MatIconModule,
+        MatInputModule,
+        MatListModule,
+        MatProgressSpinnerModule,
+        MatSelectModule,
+        MatSidenavModule,
+        MatSnackBarModule,
+        MatToolbarModule,
+        EditComponent,
+        RouterModule,
+    ],
+    templateUrl: './card.component.html',
+    styleUrl: './card.component.scss'
 })
 
 export class CardComponent {

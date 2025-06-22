@@ -34,31 +34,29 @@ import { User } from '../../../interfaces/user.interface';
 import { UsersService } from '../../../services/user.service';
 
 @Component({
-  selector: 'app-edit',
-  standalone: true,
-  imports: [
-    MatAutocompleteModule,
-    MatButtonModule,
-    MatCardModule,
-    MatChipsModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatGridListModule,
-    MatIconModule,
-    MatInputModule,
-    MatListModule,
-    MatProgressSpinnerModule,
-    MatSelectModule,
-    MatSidenavModule,
-    MatSnackBarModule,
-    MatToolbarModule,
-
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-  ],
-  templateUrl: './edit.component.html',
-  styleUrl: './edit.component.scss',
+    selector: 'app-edit',
+    imports: [
+        MatAutocompleteModule,
+        MatButtonModule,
+        MatCardModule,
+        MatChipsModule,
+        MatDialogModule,
+        MatFormFieldModule,
+        MatGridListModule,
+        MatIconModule,
+        MatInputModule,
+        MatListModule,
+        MatProgressSpinnerModule,
+        MatSelectModule,
+        MatSidenavModule,
+        MatSnackBarModule,
+        MatToolbarModule,
+        CommonModule,
+        FormsModule,
+        ReactiveFormsModule,
+    ],
+    templateUrl: './edit.component.html',
+    styleUrl: './edit.component.scss'
 })
 export default class EditComponent implements OnInit {
   public userForm: FormGroup;

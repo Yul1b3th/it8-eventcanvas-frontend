@@ -13,20 +13,19 @@ export interface DialogData {
 
 
 @Component({
-  selector: 'app-edit',
-  standalone: true,
-  imports: [
-    MatFormFieldModule,
-    MatInputModule,
-    FormsModule,
-    MatButtonModule,
-    MatDialogTitle,
-    MatDialogContent,
-    MatDialogActions,
-    MatDialogClose,
-  ],
-  templateUrl: './edit.component.html',
-  styleUrl: './edit.component.scss'
+    selector: 'app-edit',
+    imports: [
+        MatFormFieldModule,
+        MatInputModule,
+        FormsModule,
+        MatButtonModule,
+        MatDialogTitle,
+        MatDialogContent,
+        MatDialogActions,
+        MatDialogClose,
+    ],
+    templateUrl: './edit.component.html',
+    styleUrl: './edit.component.scss'
 })
 export class EditComponent {
   constructor(public dialogRef: MatDialogRef<EditComponent>,

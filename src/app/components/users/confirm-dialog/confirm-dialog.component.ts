@@ -21,28 +21,26 @@ import { User } from '../../../interfaces/user.interface';
 
 
 @Component({
-  selector: 'app-confirm-dialog',
-  standalone: true,
-  imports: [
-    MatAutocompleteModule,
-    MatButtonModule,
-    MatCardModule,
-    MatChipsModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatGridListModule,
-    MatIconModule,
-    MatInputModule,
-    MatListModule,
-    MatProgressSpinnerModule,
-    MatSelectModule,
-    MatSidenavModule,
-    MatSnackBarModule,
-    MatToolbarModule,
-
-  ],
-  templateUrl: './confirm-dialog.component.html',
-  styleUrl: './confirm-dialog.component.scss'
+    selector: 'app-confirm-dialog',
+    imports: [
+        MatAutocompleteModule,
+        MatButtonModule,
+        MatCardModule,
+        MatChipsModule,
+        MatDialogModule,
+        MatFormFieldModule,
+        MatGridListModule,
+        MatIconModule,
+        MatInputModule,
+        MatListModule,
+        MatProgressSpinnerModule,
+        MatSelectModule,
+        MatSidenavModule,
+        MatSnackBarModule,
+        MatToolbarModule,
+    ],
+    templateUrl: './confirm-dialog.component.html',
+    styleUrl: './confirm-dialog.component.scss'
 })
 export class ConfirmDialogComponent {
   constructor(
